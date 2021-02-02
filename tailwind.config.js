@@ -84,6 +84,15 @@ module.exports = {
     }),
     backgroundColor: theme => theme("colors.background"),
     extend: {
+      fill: theme => ({
+        color: {
+          "1": theme("colors.text.1"),
+          "2": theme("colors.text.2"),
+          "3": theme("colors.text.3"),
+          "link": theme("colors.text.link"),
+          "inverse": theme("colors.text.inverse")
+        }
+      }),
       animation: {
         "in": "in 300ms ease-in-out",
         "in-down": "in-down 300ms ease-in-out",
@@ -102,7 +111,7 @@ module.exports = {
         "2-lg": "0 12px 32px -2px rgba(0, 0, 0, 0.1), 0 4px 20px 0 rgba(0, 0, 0, 0.08)",
         "2-sm": "0 2px 12px -4px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.16)",
         'border-bottom': '0 1px 0 var(--calcite-ui-border-3)',
-        'outline-active': '0 0 0 1px var(--calcite-ui-brand)', 
+        'outline-active': '0 0 0 1px var(--calcite-ui-brand)',
         'none': 'none',
       },
       keyframes: {
