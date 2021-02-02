@@ -19,19 +19,17 @@
     border-0
     cursor-pointer
     relative
+    focus-base
     text--2;
   font-family: inherit;
   width: auto; // TODO - jrowlingson - button reset?
   text-align: unset;
-  @include focus-style-base(); // TODO - jrowlingson
-  &:hover,
-  &:focus {
+  &:hover {
     @apply bg-foreground-2 text-color-1 fill-color-1;
   }
 
   &:focus {
-    @apply bg-foreground-2 text-color-1 fill-color-1;
-    @include focus-style-inset(); // TODO - jrowlingson
+    @apply bg-foreground-2 text-color-1 fill-color-1 focus-inset;
   }
 
   &:active {
