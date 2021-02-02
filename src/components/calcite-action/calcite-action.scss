@@ -1,7 +1,7 @@
 :host {
   @extend %component-host; // TODO - jrowlingson
   @extend %component-spacing; // TODO - jrowlingson
-  @apply flex bf-transparent;
+  @apply flex bg-transparent;
 }
 
 :host([disabled]) {
@@ -207,12 +207,12 @@
 :host([indicator][scale="s"]) .button--text-visible::after,
 :host([indicator][scale="l"]) .button--text-visible::after {
   bottom: unset;
-  right: theme("spacing-2");
+  right: theme("spacing.2");
 }
 
 :host([indicator]) .button--text-visible.calcite--rtl::after, // TODO - jrowlingson - rtl:?
 :host([indicator][scale="s"]) .button--text-visible.calcite--rtl::after,
 :host([indicator][scale="l"]) .button--text-visible.calcite--rtl::after {
   right: unset;
-  left: theme("spacing-2");
+  left: theme("spacing.2");
 }
