@@ -63,7 +63,7 @@
 }
 
 :host([scale="l"]) .button {
-  @apply p-5
+  @apply p-5;
   @include font-size(-1); // TODO
 }
 

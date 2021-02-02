@@ -21,7 +21,6 @@ module.exports = {
       "danger": "var(--calcite-ui-danger)",
       "danger-hover": "var(--calcite-ui-danger-hover)",
       "danger-press": "var(--calcite-ui-danger-press)",
-
       background: {
         background: "var(--calcite-ui-background)",
         foreground: {
@@ -74,24 +73,15 @@ module.exports = {
       'xl': '1440px'
     },
     textColor: theme => ({
-      color: {
-        "1": theme("colors.text.1"),
-        "2": theme("colors.text.2"),
-        "3": theme("colors.text.3"),
-        "link": theme("colors.text.link"),
-        "inverse": theme("colors.text.inverse")
-      }
+      color: theme("colors.text")
     }),
-    backgroundColor: theme => theme("colors.background"),
+    backgroundColor: theme => ({
+      ...theme("colors.background"),
+      transparent: theme("colors.transparent")
+    }),
     extend: {
       fill: theme => ({
-        color: {
-          "1": theme("colors.text.1"),
-          "2": theme("colors.text.2"),
-          "3": theme("colors.text.3"),
-          "link": theme("colors.text.link"),
-          "inverse": theme("colors.text.inverse")
-        }
+        color: theme("colors.text")
       }),
       animation: {
         "in": "in 300ms ease-in-out",
