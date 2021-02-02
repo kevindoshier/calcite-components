@@ -1,6 +1,6 @@
 :host {
   @extend %component-host; // TODO - jrowlingson
-  @extend %component-spacing; // TODO - jrowlingson
+  @extend %component-spacing; // TODO - jrowlingson - remove
   @apply flex bg-transparent;
 }
 
@@ -9,18 +9,18 @@
 }
 
 .button {
-  @apply flex
-    text-color-3
-    fill-color-3
-    bg-foreground-1
-    m-0
-    justify-start
-    items-center
+  @apply bg-foreground-1
     border-0
     cursor-pointer
-    relative
+    fill-color-3
+    flex
     focus-base
-    text--2;
+    items-center
+    justify-start
+    m-0
+    relative
+    text--2
+    text-color-3;
   font-family: inherit;
   width: auto; // TODO - jrowlingson - button reset?
   text-align: unset;
@@ -116,8 +116,8 @@
 
 :host([appearance="clear"]) .button:hover,
 :host([appearance="clear"]) .button:focus {
-  background-color: transparent;
-  box-shadow: 0 0 0 2px var(--calcite-ui-border-1) inset;
+  @apply bg-transparent;
+  box-shadow: 0 0 0 2px var(--calcite-ui-border-1) inset; // TODO - jrowlingson
 }
 
 :host([active][appearance="clear"]) .button,
@@ -165,8 +165,7 @@
 
 :host([indicator]) .button::after {
   content: "";
-  @apply w-2 h-2 absolute z-10;
-  border-radius: 50%; // TODO
+  @apply w-2 h-2 absolute z-10 rounded-full; // border-2 border-foreground-1
   border: var(--calcite-spacing-eighth) solid var(--calcite-ui-foreground-1); // TODO - border color?
   background-color: var(--calcite-ui-blue-1); // TODO
   bottom: theme("spacing.2");
